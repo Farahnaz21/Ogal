@@ -85,7 +85,6 @@
             <p class="meta">Publicerad 2025-10-01 · Av Redaktionen</p>
             <p><strong>Ingress:</strong> XPhone 12 lovar snabb prestanda och bättre batteritid. Vi testade kameran, skärmen och vardagsbatteriet.</p>
 
-            <!-- Annons efter ingress -->
             <div class="ads">
               <ins class="adsbygoogle"
                    style="display:block"
@@ -99,7 +98,6 @@
 
             <p>Artikeln fortsätter med djupanalys, tester och jämförelser med tidigare modeller.</p>
 
-            <!-- Annons mitt i artikel -->
             <div class="ads">
               <ins class="adsbygoogle"
                    style="display:block"
@@ -186,4 +184,14 @@
         document.documentElement.setAttribute('data-theme', 'dark');
       }
       themeToggle.onclick = function() {
-        const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : '
+        const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+      };
+
+      // Uppdatera år i footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
